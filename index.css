@@ -12,6 +12,7 @@ body {
     width: 80vw;
     margin: auto;
     margin-top: 40px;
+    margin-bottom: 40px;
     border-radius: 20px;
     color: #F5F5F5;
     border: 5px dashed black;
@@ -23,9 +24,37 @@ body {
     color: #FF5A5F; 
     font-size: 7vw;
     margin: 0;
-    position: absolute;
+    margin-top: 25vw;
+    position: relative;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     filter: drop-shadow(-5px 5px 0px #017880);
+}
+
+.canvas {
+    width: 500px;
+    height: 500px;
+    background-color: #017880;
+    border-radius: 20px;
+    margin-left: 8vw;
+    margin-top: 50px;
+    transition: ease all .5s;
+}
+
+.sound-on {
+    position: fixed;
+    filter: invert(29%) sepia(51%) saturate(2732%) hue-rotate(160deg) brightness(89%) contrast(103%);
+    width: 50px;
+    position:fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
+@media only screen and (max-width: 600px) {
+    .canvas {
+        margin: auto;
+        width: 400px;
+        height: 400px;
+    }
 }
