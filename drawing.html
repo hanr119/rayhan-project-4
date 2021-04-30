@@ -7,16 +7,19 @@
     <link rel="preconnect" href="https://fonts.gstatic.com"> 
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@800&family=Poppins&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="index.css">
-    <title>Project 4 Homepage</title>
+    <script src="drawing.js" defer></script>
+    <title>Project 4 Writing Page</title>
 </head>
 <body>
     <div class="title">writing center</div>
-    <div class="canvas">
-        <!-- insert letter here -->
+        <div class="wrapper">
+            <canvas id="canvas"></canvas>
+            <div class="trace-letter">A</div>
+    <div class="directions">
+        press enter to change cases // 0 to clear canvas
     </div>
-    <div class="letterclick">
-        <div class="letterclickuppercase"></div>
-        <div class="letterclicklowercase"></div>
+    <div class="letter-display">
+        <!-- insert capital and lowercase letter here -->
     </div>
     <img class="sound-on" src="assets/sound.svg">
 </body>

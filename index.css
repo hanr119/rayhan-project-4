@@ -32,13 +32,11 @@ body {
     filter: drop-shadow(-5px 5px 0px #017880);
 }
 
-.canvas {
+#canvas {
     width: 500px;
     height: 500px;
     background-color: #017880;
     border-radius: 20px;
-    margin-left: 8vw;
-    margin-top: 50px;
     transition: ease all .5s;
 }
 
@@ -49,6 +47,31 @@ body {
     position:fixed;
     bottom: 20px;
     right: 20px;
+}
+
+.directions {
+    margin-left: 5vw;
+    margin-top: 30px;
+    color: #017880;
+}
+
+.wrapper {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    margin-left: 8vw;
+    margin-top: 50px;
+}
+
+.trace-letter {
+    font-size: 350px;
+    position:absolute;
+    top: 0;
+    left: 120px;
+    color: #F5F5F5;
+    -webkit-text-stroke-width: 5px;
+    -webkit-text-stroke-color: black;
+    -webkit-text-stroke-dasharray: 5;
 }
 
 @media only screen and (max-width: 600px) {
