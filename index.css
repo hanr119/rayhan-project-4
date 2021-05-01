@@ -1,6 +1,7 @@
 body {
     font-family: 'Nunito', sans-serif;
     background-color: #DCECEE;
+    margin:0px;
 }
 
 .title {
@@ -10,6 +11,7 @@ body {
     font-size: 4vw;
     background-color: #017880;
     width: 80vw;
+    height:100px;
     margin: auto;
     margin-top: 40px;
     margin-bottom: 40px;
@@ -37,7 +39,11 @@ body {
     height: 500px;
     background-color: #017880;
     border-radius: 20px;
+    border: 1px solid black;
     transition: ease all .5s;
+    background-size: 500px;
+    background: no-repeat;
+    background-position: center;
 }
 
 .sound-on {
@@ -61,17 +67,25 @@ body {
     height: 500px;
     margin-left: 8vw;
     margin-top: 50px;
+    
 }
 
 .trace-letter {
     font-size: 350px;
     position:absolute;
     top: 0;
-    left: 120px;
     color: #F5F5F5;
     -webkit-text-stroke-width: 5px;
     -webkit-text-stroke-color: black;
     -webkit-text-stroke-dasharray: 5;
+    width: 500px;
+    height: 500px;
+    z-index: -9999;
+    text-align: center;
+    background-color: #017880;
+    border-radius: 19px;
+    left: 1px;
+    top: 1px;
 }
 
 @media only screen and (max-width: 600px) {

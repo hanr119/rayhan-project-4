@@ -11,12 +11,21 @@ window.addEventListener("resize", resize);
 resize();
 
 function resize() {
-  ctx.canvas.width = window.innerWidth;
-  ctx.canvas.height = window.innerHeight;
+  ctx.canvas.width = 500;
+  ctx.canvas.height = 500;
 }
 function reposition(event) {
-  coord.x = event.clientX - canvas.offsetLeft;
-  coord.y = event.clientY - canvas.offsetTop;
+  // canvas is off set by left margin of wrapper and height of div.title, top and bottom margin of .div.title and top .wrapper
+  // we have to get left margin (since its in vw)of the wrapper through the rendered style of the window
+
+  let canvasOffsetLeft = window.getComputedStyle(document.getElementById("wrapperId"));
+  let l = canvasOffsetLeft.marginLeft; 
+  // convert l to number so I can substract
+  coord.x = event.clientX - l.match(/\d+/)[0];
+
+  // the top I get from several elements:
+  // topmargin of div.title + height of div.title + bottom margin of div.title + top margin of div.wrapper
+  coord.y = event.clientY - 230;
 }
 function start(event) {
   document.addEventListener("mousemove", draw);
@@ -45,5 +54,9 @@ document.addEventListener("keydown", function(event){
   // clear the canvas 
   if (event.key == "0"){
     ctx.clearRect(0, 0, canvas.width, canvas.height);   
+  }  
+  if (event.key == "Enter"){
+    let letterTraced = document.getElementById("letterTraced");
+    letterTraced.innerHTML = "a"; 
   }  
 })
