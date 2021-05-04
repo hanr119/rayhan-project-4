@@ -18,6 +18,9 @@ body {
     border-radius: 20px;
     color: #F5F5F5;
     border: 5px dashed black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .container {
@@ -32,6 +35,16 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     filter: drop-shadow(-5px 5px 0px #017880);
+}
+
+a {
+    text-decoration: none;
+    color: #FF5A5F;
+    display: inline-block;
+    overflow-wrap: break-word;
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    hyphens: none;
 }
 
 #canvas {
@@ -56,7 +69,7 @@ body {
 }
 
 .directions {
-    margin-left: 5vw;
+    margin-left: 4vw;
     margin-top: 30px;
     color: #017880;
 }
@@ -67,17 +80,11 @@ body {
     height: 500px;
     margin-left: 8vw;
     margin-top: 50px;
-    
 }
 
 .trace-letter {
-    font-size: 350px;
     position:absolute;
     top: 0;
-    color: #F5F5F5;
-    -webkit-text-stroke-width: 5px;
-    -webkit-text-stroke-color: black;
-    -webkit-text-stroke-dasharray: 5;
     width: 500px;
     height: 500px;
     z-index: -9999;
@@ -86,6 +93,14 @@ body {
     border-radius: 19px;
     left: 1px;
     top: 1px;
+    float: left;
+}
+
+.letter-display {
+    font-size: 300px;
+    right: 100px;
+    float: right;
+    color: #FF5A5F;
 }
 
 @media only screen and (max-width: 600px) {
