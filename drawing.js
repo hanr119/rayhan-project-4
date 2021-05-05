@@ -25,7 +25,7 @@ function reposition(event) {
 
   // the top I get from several elements:
   // topmargin of div.title + height of div.title + bottom margin of div.title + top margin of div.wrapper
-  coord.y = event.clientY - 230;
+  coord.y = event.offsetY || event.layerY;
 }
 function start(event) {
   document.addEventListener("mousemove", draw);
