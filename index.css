@@ -109,4 +109,8 @@ a {
         width: 400px;
         height: 400px;
     }
+    .wrapper {
+        margin-left: 0vw;
+        margin-top: 50px;
+    }
 }
