@@ -99,11 +99,10 @@ a {
 .letter-display {
     font-size: 300px;
     margin-right: 100px;
-    float: right;
     color: #FF5A5F;
     padding: 100px;
     margin-top: -600px;
-    
+    margin-left: 550px;
 }
 
 @media only screen and (max-width: 600px) {
@@ -115,5 +114,9 @@ a {
     .wrapper {
         margin-left: 0vw;
         margin-top: 50px;
+    }
+    .letter-display {
+        margin-top: 0px;
+        margin-left: -10px;
     }
 }
